@@ -10,4 +10,4 @@ STATUS="$(curl \
     --user "${INPUTS_USERNAME:-${GITHUB_REPOSITORY_OWNER}}:${INPUTS_PASSWORD}" \
     --write-out "%{http_code}" \
     https://manager.pgxn.org/upload)"
-test "${STATUS}" -ne 200 && exit 1
+test "${STATUS}" -eq "200" || exit 1
