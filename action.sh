@@ -1,7 +1,7 @@
 #!/bin/sh
 
 set -eux
-curl --output="${GITHUB_REF##*/}.zip" "https://github.com${GITHUB_REPOSITORY}/archive/refs/tags/${GITHUB_REF##*/}.zip"
+curl --output "${GITHUB_REF##*/}.zip" "https://github.com${GITHUB_REPOSITORY}/archive/refs/tags/${GITHUB_REF##*/}.zip"
 curl \
     --form "archive=@${GITHUB_REF##*/}.zip" \
     --form 'submit=Release It!' \
