@@ -3,7 +3,7 @@
 set -eux
 curl --output "${GITHUB_REPOSITORY##*/}-${GITHUB_REF##*/}.zip" "${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/archive/refs/tags/${GITHUB_REF##*/}.zip"
 curl \
-    --form "archive=@${GITHUB_REF##*/}.zip" \
+    --form "archive=@${GITHUB_REPOSITORY##*/}-${GITHUB_REF##*/}.zip" \
     --form 'submit=Release It!' \
     --header 'X-Requested-With: XMLHttpRequest' \
     --user "${INPUTS_USERNAME:-${GITHUB_REPOSITORY_OWNER}}:${INPUTS_PASSWORD}" \
