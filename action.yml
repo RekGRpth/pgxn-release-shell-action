@@ -1,0 +1,8 @@
+name: pgxn release shell action
+description: pgxn release shell action
+author: RekGRpth
+runs:
+  using: composite
+  steps:
+    - run: "${GITHUB_ACTION_PATH}/action.sh"
+      shell: sh

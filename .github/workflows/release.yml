@@ -1,0 +1,16 @@
+name: Release
+on:
+  push:
+    branches:
+      - v1
+  workflow_dispatch:
+jobs:
+  push:
+    concurrency:
+      cancel-in-progress: true
+      group: ${{ github.ref }}
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          GITHUB_TOKEN: ${{ github.token }}
+        uses: rekgrpth/github-publish-action-shell-action@v1

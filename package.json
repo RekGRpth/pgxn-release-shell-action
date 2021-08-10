@@ -1,0 +1,15 @@
+{
+    "private": true,
+    "name": "pgxn-release-shell-action",
+    "version": "v1",
+    "author": {
+      "name": "RekGRpth",
+      "email": "RekGRpth@gmail.com",
+      "url": "https://github.com/RekGRpth/pgxn-release-shell-action"
+    },
+    "license": "MIT",
+    "dependencies": {
+    },
+    "devDependencies": {
+    }
+  }
